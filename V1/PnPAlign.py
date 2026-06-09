@@ -3,7 +3,7 @@ import scipy
 
 from Photo_PointSelectionGui import select_2d_points as photoGui
 from Mesh_PointSelectionGui import select_3d_points as meshGui
-from Point_selection import pick_points
+from V1.Point_selection import pick_points
 import json
 import os
 import numpy as np
@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 from matplotlib.collections import LineCollection
 
 json_file = 'picked_points_Logi_1612_S10_C4.json'
-mesh_file = '1613_LDMesh_260109.stl'
+mesh_file = 'meshes/1613_LDMesh_260109.stl'
 photo_path = 'Camera4_2023-01-15_10-14-44.jpg'
 
 # Run the concurrent picker
@@ -328,3 +328,4 @@ optimized_pose = {
 }
 with open('optimized_pose.json', 'w') as f:
     json.dump(optimized_pose, f)
+
